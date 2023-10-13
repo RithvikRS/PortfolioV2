@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Sora';
+  font-weight: light;
+  font-display: swap;
+  src: url(/fonts/static/Sora-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Sora';
+  font-display: swap;
+  src: url(/fonts/static/Sora-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Sora';
+  font-weight: medium;
+  font-display: swap;
+  src: url(/fonts/static/Sora-Medium.ttf);
+}
+
+:root {
+	@apply scroll-smooth font-sora font-light;
+}
+
+body {
+	@apply noise-bg min-h-screen w-full overflow-x-hidden transition-colors;
+}
+
+.noise-bg.dark,
+.dark .noise-bg {
+	background: url(/noise.webp) theme('colors.black.300');
+}
+
+@keyframes noise {
+	0% {
+		background-position: 0rem 9rem;
+	}
+	10% {
+		background-position: -1rem -4rem;
+	}
+	20% {
+		background-position: -8rem -4rem;
+	}
+	30% {
+		background-position: 9rem -9rem;
+	}
+	40% {
+		background-position: -2rem 7rem;
+	}
+	50% {
+		background-position: -9rem 4rem;
+	}
+	60% {
+		background-position: 2rem 6rem;
+	}
+	70% {
+		background-position: 7rem -8rem;
+	}
+	80% {
+		background-position: -9rem 1rem;
+	}
+	90% {
+		background-position: 6rem -5rem;
+	}
+	100% {
+		background-position: -7rem 0rem;
+	}
+}
